@@ -1,8 +1,10 @@
-export interface RegisterDto {
+export interface RegisterRequestDto {
   email: string;
   password: string;
-  confirmPassword: string;
   firstName: string;
   lastName: string;
   mobile: string
+}
+
+export interface RegisterResponseDto {
 }

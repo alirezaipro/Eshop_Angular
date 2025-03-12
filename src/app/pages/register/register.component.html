@@ -1,1 +1,20 @@
-<p>register works!</p>
+<div class="container">
+  <section id="form"><!--form-->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="signup-form"><!--sign up form-->
+          <h2>ثبت نام کاربـر جدیـد</h2>
+          <form (submit)="onRegisterUser()">
+            <input type="text" name="firstName" placeholder="نام" [(ngModel)]="model.firstName"/>
+            <input type="text" name="lastName" placeholder="نام خانوادگی" [(ngModel)]="model.lastName"/>
+            <input type="email" name="email" placeholder="آدرس ایمیـل" [(ngModel)]="model.email"/>
+            <input type="email" name="mobile" placeholder="شماره موبایل" [(ngModel)]="model.mobile"/>
+            <input type="password" name="password" placeholder="رمـز عبـور" [(ngModel)]="model.password"/>
+            <button type="submit" class="btn btn-default">ثبت نام</button>
+          </form>
+        </div><!--/sign up form-->
+      </div>
+    </div>
+  </section>
+</div>
+<!--/form-->
