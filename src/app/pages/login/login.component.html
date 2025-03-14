@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div class="container">
+  <section id="form"><!--form-->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="signup-form"><!--sign up form-->
+          <h2>ورود کاربـر</h2>
+          <form (submit)="onLoginUser()">
+            <input type="email" name="email" placeholder="آدرس ایمیـل" [(ngModel)]="model.email"/>
+            <input type="password" name="password" placeholder="رمـز عبـور" [(ngModel)]="model.password"/>
+            <button type="submit" class="btn btn-default">ورود</button>
+          </form>
+        </div><!--/sign up form-->
+      </div>
+    </div>
+  </section>
+</div>
+<!--/form-->
