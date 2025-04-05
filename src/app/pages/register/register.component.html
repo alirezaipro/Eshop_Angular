@@ -4,12 +4,22 @@
       <div class="col-sm-12">
         <div class="signup-form"><!--sign up form-->
           <h2>ثبت نام کاربـر جدیـد</h2>
-          <form (submit)="onRegisterUser()">
-            <input type="text" name="firstName" placeholder="نام" [(ngModel)]="model.firstName"/>
-            <input type="text" name="lastName" placeholder="نام خانوادگی" [(ngModel)]="model.lastName"/>
-            <input type="email" name="email" placeholder="آدرس ایمیـل" [(ngModel)]="model.email"/>
-            <input type="email" name="mobile" placeholder="شماره موبایل" [(ngModel)]="model.mobile"/>
-            <input type="password" name="password" placeholder="رمـز عبـور" [(ngModel)]="model.password"/>
+          <form (submit)="onRegisterUser()" [formGroup]="registerForm">
+            <input type="text" formControlName="firstName" placeholder="نام"/>
+            <app-validation-message [control]="registerForm.get('firstName')"></app-validation-message>
+
+            <input type="text" formControlName="lastName" placeholder="نام خانوادگی"/>
+            <app-validation-message [control]="registerForm.get('lastName')"></app-validation-message>
+
+            <input type="email" formControlName="email" placeholder="آدرس ایمیـل"/>
+            <app-validation-message [control]="registerForm.get('email')"></app-validation-message>
+
+            <input type="email" formControlName="mobile" placeholder="شماره موبایل"/>
+            <app-validation-message [control]="registerForm.get('mobile')"></app-validation-message>
+
+            <input type="password" formControlName="password" placeholder="رمـز عبـور"/>
+            <app-validation-message [control]="registerForm.get('password')"></app-validation-message>
+
             <button type="submit" class="btn btn-default">ثبت نام</button>
           </form>
         </div><!--/sign up form-->

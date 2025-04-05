@@ -1,0 +1,13 @@
+@if (control?.invalid && !control?.untouched) {
+  <div>
+    @if(control?.errors?.['required']){
+      <span class="text-danger">لطفا فیلد را وارد کنید</span>
+    }
+    @if(control?.errors?.['minlength']){
+      <span class="text-danger">حداقل کاراکتر وارد شده مجاز نمی باشد</span>
+    }
+    @if(control?.errors?.['maxlength']){
+      <span class="text-danger">حداکثر تعداد کاراکتر وارد شده مجاز نمی باشد</span>
+    }
+  </div>
+}

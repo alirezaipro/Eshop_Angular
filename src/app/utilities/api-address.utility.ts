@@ -5,4 +5,6 @@ export class ApiAddress{
   static login:string="/login";
   static register:string="/register";
 
+  static contactUs:string="/contactus";
+
 }
