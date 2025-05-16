@@ -7,4 +7,8 @@ export class ApiAddress{
 
   static contactUs:string="/contactus";
 
+  static aboutUs:string="/aboutus";
+
+  static blogs:string="/blogs";
+
 }

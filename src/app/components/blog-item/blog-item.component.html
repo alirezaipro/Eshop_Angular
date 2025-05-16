@@ -1,0 +1,26 @@
+@if (blog != null && blog.id > 0) {
+  <div class="single-blog-post">
+    <h3>{{blog.title}}</h3>
+    <div class="post-meta">
+      <ul>
+        <li><i class="fa fa-user"></i> {{blog.authorFullName}}</li>
+        <li><i class="fa fa-calendar"></i>{{blog.createdDate}}</li>
+      </ul>
+<!--      <span>-->
+<!--										<i class="fa fa-star"></i>-->
+<!--										<i class="fa fa-star"></i>-->
+<!--										<i class="fa fa-star"></i>-->
+<!--										<i class="fa fa-star"></i>-->
+<!--										<i class="fa fa-star-half-o"></i>-->
+<!--								</span>-->
+    </div>
+    <a href="">
+      <img src="{{blog.imageSrc}}" alt="{{blog.title}}">
+    </a>
+    <p>
+      {{blog.shortDescription}}
+    </p>
+    <a class="btn btn-primary">ادامـه مطلب</a>
+  </div>
+
+}

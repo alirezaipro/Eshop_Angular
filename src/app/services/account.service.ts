@@ -14,7 +14,7 @@ export class AccountService {
   constructor(private httpClient: HttpClient) {
   }
 
-  login(model: LoginRequestDto):Observable<ApiResponse<string>> {
+  login(model: LoginRequestDto): Observable<ApiResponse<string>> {
     return this.httpClient.post<ApiResponse<string>>(ApiAddress.login, model);
   }
 
@@ -22,6 +22,15 @@ export class AccountService {
 
     return this.httpClient.post<ApiResponse<RegisterResponseDto>>(ApiAddress.register, model);
 
+  }
+
+  checkedUserIsLogin(): boolean {
+    let token = localStorage.getItem('jwt_token');
+
+    if (token == null || token == undefined)
+      return false;
+    else
+      return true;
   }
 
 }

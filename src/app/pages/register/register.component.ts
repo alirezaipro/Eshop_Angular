@@ -30,12 +30,12 @@ export class RegisterComponent {
   };
 
   registerForm = new FormGroup({
-    firstName: new FormControl(this.model.firstName, [Validators.required,Validators.minLength(3),Validators.maxLength(10)]),
-    lastName: new FormControl(this.model.lastName, [Validators.required]),
-    mobile: new FormControl(this.model.mobile, [Validators.required]),
-    password: new FormControl(this.model.password, [Validators.required]),
-    email: new FormControl(this.model.email, [Validators.required]),
-});
+    firstName: new FormControl(this.model.firstName, [Validators.required, Validators.minLength(3), Validators.maxLength(150)]),
+    lastName: new FormControl(this.model.lastName, [Validators.required, Validators.minLength(3), Validators.maxLength(150)]),
+    mobile: new FormControl(this.model.mobile, [Validators.required, Validators.maxLength(15)]),
+    password: new FormControl(this.model.password, [Validators.required, Validators.minLength(8)]),
+    email: new FormControl(this.model.email, [Validators.required, Validators.maxLength(300), Validators.email]),
+  });
 
   constructor(
     private accountService: AccountService,
